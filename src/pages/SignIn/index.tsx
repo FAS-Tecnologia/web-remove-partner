@@ -12,7 +12,7 @@ import { AxiosError } from "axios"
 
 import { api } from "../../lib/api"
 
-import { SignInButton, SignInContainer, SignInContent, SignInForm, SignInInputContainer, SignInTitle } from "./styles"
+import { SignInButton, SignInContainer, SignInContent, SignInForm, SignInInputContainer, SignInTitle, Title } from "./styles"
 
 type IPartner = {
   id: string;
@@ -62,7 +62,12 @@ export const SignInPage = () => {
   
   return (
     <SignInContainer>
+      
       <SignInContent>
+      <Title>
+          Parceiros - FAS Tecnologia
+        </Title>
+
         <SignInForm onSubmit={handleSubmit(handleSubmitSignIn)}>
           <SignInTitle>Faça o login</SignInTitle>
 

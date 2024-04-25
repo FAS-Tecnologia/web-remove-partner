@@ -1,18 +1,26 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const SignInContainer = styled.div`
   width: 100vw;
   height: 100vh;
 
-  background-color: ${({ theme }) => theme.colors["gray-700"]};
+  background-color: ${({ theme }) => theme.colors['gray-700']};
 `;
 
 export const SignInContent = styled.div`
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+export const Title = styled.h1`
+  font-size: 40px;
+  color: ${({ theme }) => theme.colors.white};
+
+  margin-bottom: 20px;
 `;
 
 export const SignInForm = styled.form`
@@ -21,19 +29,19 @@ export const SignInForm = styled.form`
 
   background-color: ${({ theme }) => theme.colors.white};
 
-  color: ${({ theme }) => theme.colors["gray-700"]};
+  color: ${({ theme }) => theme.colors['gray-700']};
 
   padding: 2rem;
 `;
 
 export const SignInTitle = styled.h1`
-  font-size: 3rem;  
+  font-size: 3rem;
 
   margin-bottom: 3rem;
-`
+`;
 
 interface ISignInInputContainerProps {
-  isError?: boolean
+  isError?: boolean;
 }
 
 export const SignInInputContainer = styled.div<ISignInInputContainerProps>`
@@ -42,7 +50,7 @@ export const SignInInputContainer = styled.div<ISignInInputContainerProps>`
 
   padding: 5px;
 
-  border: ${({ theme }) => `1px solid ${theme.colors["gray-600"]}`};
+  border: ${({ theme }) => `1px solid ${theme.colors['gray-600']}`};
 
   border-radius: 5px;
 
@@ -50,11 +58,11 @@ export const SignInInputContainer = styled.div<ISignInInputContainerProps>`
     margin-top: 8px;
   }
 
-  ${({ isError }) => 
-    isError && css`
-      border: 1px solid ${({ theme }) => theme.colors["red-500"]};
-    `
-  }
+  ${({ isError }) =>
+    isError &&
+    css`
+      border: 1px solid ${({ theme }) => theme.colors['red-500']};
+    `}
 
   input {
     width: 100%;
@@ -62,11 +70,11 @@ export const SignInInputContainer = styled.div<ISignInInputContainerProps>`
 
     border: none;
 
-    font-size:  1.875rem;
-    color: ${({ theme }) => theme.colors["gray-700"]};
+    font-size: 1.875rem;
+    color: ${({ theme }) => theme.colors['gray-700']};
 
     &::placeholder {
-      color: ${({ theme }) => theme.colors["gray-400"]};
+      color: ${({ theme }) => theme.colors['gray-400']};
     }
   }
 `;
@@ -77,12 +85,11 @@ export const SignInButton = styled.button`
   width: 100%;
   height: 4rem;
 
-  background-color: ${({ theme }) => theme.colors["green-500"]};
+  background-color: ${({ theme }) => theme.colors['green-500']};
 
   text-align: center;
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.white};
-
 
   margin-top: 1rem;
 
